@@ -1,0 +1,228 @@
+body, h1, h2, h3, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #00A572; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+header {
+  background: #00A572; 
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: 'Lora', serif;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+      display: block;
+      background: #fff;
+      color: #00A572;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+  }
+
+  #nav-list {
+      display: none;
+      flex-direction: column;
+  }
+
+  #nav-list li {
+      margin: 0.5rem 0;
+  }
+}
+
+.hero {
+  position: relative;
+  background: url('C:/Users/nalam/OneDrive/Pictures/Documents/Prodigy Tasks/Garden.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 165, 114, 0.6); 
+  z-index: 1;
+}
+
+.hero h2, .hero p {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.content-section {
+  padding: 2rem;
+  margin: 2rem 1rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #00A572; 
+}
+
+.content-section h2 {
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: #00A572;
+}
+
+.tips-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+article {
+  flex: 1;
+  margin: 1rem;
+  padding: 1rem;
+  background: #e8f5e9;
+  border-radius: 5px;
+  color: #00A572;
+  transition: transform 0.3s;
+}
+
+article:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #00A572; 
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 0.5rem 0;
+  }
+
+  .hero h2 {
+      font-size: 2rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .content-section {
+      margin: 1rem 0.5rem;
+  }
+
+  .tips-container {
+      flex-direction: column;
+  }
+
+  article {
+      margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 2rem;
+  }
+
+  nav ul li a {
+      font-size: 1rem;
+  }
+
+  .hero {
+      padding: 2rem 1rem;
+  }
+
+  .hero h2 {
+      font-size: 1.5rem;
+  }
+
+  .hero p {
+      font-size: 0.9rem;
+  }
+}
+
